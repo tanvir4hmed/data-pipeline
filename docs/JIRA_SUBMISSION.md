@@ -6,7 +6,7 @@
 - Assignee: Tanvir Ahmed
 - Parent ticket: unchanged
 - Final acceptance run: `568040207525854` — Succeeded in 4m 35s
-- Jira attachments: 14 individually uploaded files
+- Jira attachments: 16 individually uploaded files
 
 ## Description summary
 
@@ -42,5 +42,7 @@ Jira displays newest comments first, so the four sections were posted in reverse
 - `full_dag_graph.svg`
 - `successful_run_summary.svg`
 - `performance_comparison.svg`
+- `five_stage_job_dag.png`
+- `gold_pipeline_graph.png`
 
 No local filesystem path is included in the Jira description or comments.
