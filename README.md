@@ -36,6 +36,8 @@ Bronze ingested 11,148,511 yellow and 162,363 green records without duplicate ac
 
 ![Successful run summary](evidence/successful_run_summary.svg)
 
+![Shuffle partition performance comparison](evidence/performance_comparison.svg)
+
 ## Run
 
 Follow `docs/TECHNICAL_HANDS_ON_RUNBOOK.md`. The intended order is landing -> Bronze -> Silver -> Gold pipeline -> business analysis. No credentials or workspace-specific secrets are stored in this repository.

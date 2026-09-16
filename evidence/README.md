@@ -6,6 +6,7 @@ This directory contains the same final execution evidence used in the local deli
 
 1. `full_dag_graph.svg` — the deployed five-stage dependency graph: Land → Bronze → Silver → Gold → Analysis.
 2. `successful_run_summary.svg` — the successful acceptance run summary, including duration, query count and row I/O.
+3. `performance_comparison.svg` — the measured 200-versus-16 shuffle-partition runtime comparison.
 
 Both visuals are displayed directly in the repository root README and are also attached individually to P1880-781.
 
