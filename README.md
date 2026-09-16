@@ -32,6 +32,16 @@ Bronze ingested 11,148,511 yellow and 162,363 green records without duplicate ac
 
 ## Execution evidence
 
+### Databricks job orchestration
+
+![Databricks five-stage job DAG](evidence/five_stage_job_dag.png)
+
+### Gold pipeline lineage and output volumes
+
+![Databricks Gold pipeline graph](evidence/gold_pipeline_graph.png)
+
+### Measured summaries
+
 ![Five-stage Lakeflow workflow](evidence/full_dag_graph.svg)
 
 ![Successful run summary](evidence/successful_run_summary.svg)

@@ -4,9 +4,11 @@ This directory contains the same final execution evidence used in the local deli
 
 ## Visual evidence
 
-1. `full_dag_graph.svg` — the deployed five-stage dependency graph: Land → Bronze → Silver → Gold → Analysis.
-2. `successful_run_summary.svg` — the successful acceptance run summary, including duration, query count and row I/O.
-3. `performance_comparison.svg` — the measured 200-versus-16 shuffle-partition runtime comparison.
+1. `five_stage_job_dag.png` — Databricks UI evidence of the deployed Land → Bronze → Silver → Gold → Analysis job graph.
+2. `gold_pipeline_graph.png` — Databricks UI evidence of Gold lineage, output record volumes and successful materialized views.
+3. `full_dag_graph.svg` — reviewer-friendly rendering of the five-stage dependency graph.
+4. `successful_run_summary.svg` — the successful acceptance run summary, including duration, query count and row I/O.
+5. `performance_comparison.svg` — the measured 200-versus-16 shuffle-partition runtime comparison.
 
 Both visuals are displayed directly in the repository root README and are also attached individually to P1880-781.
 
