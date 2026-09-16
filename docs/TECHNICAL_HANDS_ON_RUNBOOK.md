@@ -18,6 +18,7 @@ This runbook reproduces the assignment manually in Databricks official cloud and
 - Raw Volume: `/Volumes/workspace/taxi_tanvir/raw/`
 - Workspace sources: `/Workspace/Users/md.tanvir@bjitgroup.com/P1880-781/`
 - Version-controlled source: https://github.com/tanvir4hmed/data-pipeline
+- Databricks Git folder: https://dbc-fa972b8c-fd14.cloud.databricks.com/browse/folders/4033904194528227?o=7474659918792478
 
 Workspace access is required to open the links.
 

@@ -1,6 +1,7 @@
 # P1880-781 Databricks resources
 
 GitHub repository: https://github.com/tanvir4hmed/data-pipeline
+Databricks Git folder: https://dbc-fa972b8c-fd14.cloud.databricks.com/browse/folders/4033904194528227?o=7474659918792478
 
 Final five-stage successful run: https://dbc-fa972b8c-fd14.cloud.databricks.com/jobs/993328277314420/runs/568040207525854?o=7474659918792478
 
