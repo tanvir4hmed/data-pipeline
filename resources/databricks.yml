@@ -1,0 +1,52 @@
+bundle:
+  name: p1880_781_nyc_taxi
+
+variables:
+  gold_pipeline_id:
+    description: Existing Lakeflow Declarative Pipeline ID
+    default: 2d0d93cb-a503-4cb6-90b4-b6dc992d1ab2
+
+resources:
+  jobs:
+    nyc_taxi_end_to_end:
+      name: P1880-781 NYC Taxi Lakehouse - Full DAG
+      max_concurrent_runs: 1
+      tasks:
+        - task_key: 01_land_sources
+          notebook_task:
+            notebook_path: ../src/notebooks/01_setup_and_land.py
+          environment_key: serverless
+        - task_key: 02_bronze
+          depends_on:
+            - task_key: 01_land_sources
+          notebook_task:
+            notebook_path: ../src/notebooks/02_bronze_autoloader.py
+          environment_key: serverless
+        - task_key: 03_silver
+          depends_on:
+            - task_key: 02_bronze
+          notebook_task:
+            notebook_path: ../src/notebooks/03_silver_quality.py
+          environment_key: serverless
+        - task_key: 04_gold_pipeline
+          depends_on:
+            - task_key: 03_silver
+          pipeline_task:
+            pipeline_id: ${var.gold_pipeline_id}
+            full_refresh: false
+        - task_key: 05_business_answers
+          depends_on:
+            - task_key: 04_gold_pipeline
+          notebook_task:
+            notebook_path: ../src/notebooks/05_business_answers.py
+          environment_key: serverless
+      environments:
+        - environment_key: serverless
+          spec:
+            client: "1"
+
+targets:
+  dev:
+    default: true
+    workspace:
+      host: https://dbc-fa972b8c-fd14.cloud.databricks.com
