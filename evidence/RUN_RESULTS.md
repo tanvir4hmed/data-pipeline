@@ -70,4 +70,14 @@ The tuned run was 7.8% faster for this representative aggregation. Auto Loader c
 - Rows written: 10,991,418
 - Trigger: active file-arrival trigger on the raw Unity Catalog Volume
 
+### Final five-stage acceptance run
+
+- Run ID: `568040207525854`
+- Result: **Succeeded** on 2026-09-16 in 4 minutes 35 seconds
+- DAG: `01_land_sources → 02_bronze → 03_silver → 04_gold_pipeline → 05_business_answers`
+- Queries: 42
+- Rows read: 178,923,722
+- Rows written: 22,305,084
+- Run URL: https://dbc-fa972b8c-fd14.cloud.databricks.com/jobs/993328277314420/runs/568040207525854?o=7474659918792478
+
 The successful run followed an intentional rerun after the landing validation was hardened to check the seven expected filenames. This prevents Auto Loader metadata entries from being mistaken for duplicate source files.

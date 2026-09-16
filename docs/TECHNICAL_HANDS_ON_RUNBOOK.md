@@ -12,6 +12,8 @@ This runbook reproduces the assignment manually in Databricks official cloud and
 - Job ID: `993328277314420`
 - Successful run: https://dbc-fa972b8c-fd14.cloud.databricks.com/jobs/993328277314420/runs/980778669583774?o=7474659918792478
 - Run ID: `980778669583774`
+- Final five-stage successful run: https://dbc-fa972b8c-fd14.cloud.databricks.com/jobs/993328277314420/runs/568040207525854?o=7474659918792478
+- Final run ID/duration: `568040207525854` / `4m 35s`
 - Catalog/schema: `workspace.taxi_tanvir`
 - Raw Volume: `/Volumes/workspace/taxi_tanvir/raw/`
 - Workspace sources: `/Workspace/Users/md.tanvir@bjitgroup.com/P1880-781/`
@@ -119,7 +121,7 @@ Create the serverless job `P1880-781 NYC Taxi Lakehouse` as a complete five-stag
 
 Add an active **File arrival** trigger using storage type **Volumes** and the raw UC Volume as its location. Validated Job ID: `993328277314420`.
 
-The original validated run (`980778669583774`) covers the first three tasks and remains useful execution evidence. Extend the same job with the Gold pipeline task and analysis task, then run the full DAG and retain the new run ID. Run it again and confirm unchanged source files do not change Bronze counts.
+The original validated run (`980778669583774`) covers the first three tasks and remains useful execution evidence. The final acceptance run (`568040207525854`) verified all five tasks in one DAG and succeeded in 4 minutes 35 seconds. Run it again after adding no files and confirm unchanged source files do not change Bronze counts.
 
 ### 8. Connect version control
 

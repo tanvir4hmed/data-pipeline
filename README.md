@@ -27,7 +27,13 @@ flowchart LR
 
 ## Verified result
 
-Bronze ingested 11,148,511 yellow and 162,363 green records without duplicate accumulation on rerun. Silver removed four duplicate records and passed mandatory-null and uniqueness assertions. Gold published zone, enriched-trip, hourly-zone and daily-payment outputs. The original three-task run completed successfully in 1 minute 46 seconds; the workflow definition in this repository extends the orchestration to Gold and analysis so the complete dependency graph is version controlled.
+Bronze ingested 11,148,511 yellow and 162,363 green records without duplicate accumulation on rerun. Silver removed four duplicate records and passed mandatory-null and uniqueness assertions. Gold published zone, enriched-trip, hourly-zone and daily-payment outputs. The final five-task workflow completed successfully in 4 minutes 35 seconds (run `568040207525854`), covering landing, Bronze, Silver, Gold and business analysis in one dependency graph.
+
+## Execution evidence
+
+![Five-stage Lakeflow workflow](evidence/full_dag_graph.svg)
+
+![Successful run summary](evidence/successful_run_summary.svg)
 
 ## Run
 
