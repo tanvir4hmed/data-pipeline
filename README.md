@@ -23,6 +23,7 @@ flowchart LR
 - `resources/databricks.yml` - deployable five-stage workflow definition
 - `docs/TECHNICAL_HANDS_ON_RUNBOOK.md` - detailed manual build and operating procedure
 - `docs/AZURE_MIGRATION.md` - same implementation path for Azure Databricks
+- `docs/JIRA_SUBMISSION.md` - final Jira description, comment order, attachment manifest and completion status
 - `evidence/` - verified counts, run IDs and direct workspace resources
 
 ## Verified result
